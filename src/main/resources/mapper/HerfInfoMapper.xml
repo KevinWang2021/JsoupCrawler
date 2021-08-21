@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--        1.HerfInfoMapper.xml中设置 namespace="tech.pariote.dao.HerfInfoMapper"-->
+<mapper namespace="tech.pariote.dao.HerfInfoMapper">
+<!--    2、statement中id和HerfInfoMapper接口中的方法名一致-->
+    <!--    3、statement中parameterType和HerfInfoMapper接口中的方法输入参数类型一致-->
+    <!--    4、statement中resultType和HerfInfoMapper接口中的输出集合中元素类型一致-->
+    <select id="getHerfInfo" parameterType="int" resultType="tech.pariote.bean.HerfInfo">
+        select * from t_HerfInfo where sourcePageID =#{sourcePageID}
+    </select>
+
+</mapper>
